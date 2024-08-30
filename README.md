@@ -8,8 +8,9 @@ SensorTile.box is a family of ready-to-use programmable wireless box kits
 equipped with a Bluetooth Low Energy SoC. acting as a network coprocessor,
 for developing any IoT application based on remote data gathering and evaluation.
 
-This repo contains [BLE Controller-only firmware](#ctrl-only-fw) images for the following
-boards:
+This repo contains [BLE Controller-only firmware](#ctrl-only-fw) images, and a
+[Zephyr](https://github.com/zephyrproject-rtos) application to upload them, for
+the following SensorTile.box family boards:
 
 - [STEVAL-MKBOXPRO](https://www.st.com/en/evaluation-tools/steval-mkboxpro.html)
 - [STEVAL-MKSBOX1V1](https://www.st.com/en/evaluation-tools/steval-mksbox1v1.html)
@@ -56,7 +57,7 @@ which already offer their own Host solution (see for example the
 [Zephyr Bluetooth Stack](https://docs.zephyrproject.org/latest/connectivity/bluetooth/bluetooth-arch.html)
 for getting more specific information).
 
-Hence a standard Sensortile.box kit which runs, for example, Zephyr BLE subsystem (or
+Hence a standard SensorTile.box board which runs, for example, Zephyr BLE subsystem (or
 others based on the same concept), requires replacing the BLE SoC default firmware
 with a controller-only one.
 
@@ -67,8 +68,10 @@ Currently the Zephyr RTOS supports the following SensorTile boards:
 - [Zephyr STEVAL-MKBOXPRO](https://docs.zephyrproject.org/latest/boards/st/sensortile_box_pro/doc/index.html)
 - [Zephyr STEVAL-MKSBOX1V1](https://docs.zephyrproject.org/latest/boards/st/sensortile_box/doc/index.html)
 
-The Zephyr RTOS provides a s/w method that might be used to update the BLE SoC
-firmware.
+This repo contains a Zephyr application under
+[ble_fw_upg_app](https://github.com/STMicroelectronics/stsw-mkbox-bleco/tree/master/ble_fw_upg_app) directory,
+where you can also find a README file which explains the usage,
+which can be used to upload the ble firmware on sensortile_box_pro board
 
 ------
 
